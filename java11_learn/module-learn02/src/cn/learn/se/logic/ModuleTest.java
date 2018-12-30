@@ -1,6 +1,7 @@
 package cn.learn.se.logic;
 
 import cn.learn.se.entity.Person;
+import org.junit.Test;
 
 /**
  * java11_learn - cn.learn.se.logic
