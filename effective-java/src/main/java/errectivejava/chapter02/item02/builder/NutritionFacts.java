@@ -1,4 +1,4 @@
-package cn.learn.se.effective.ch02;
+package errectivejava.chapter02.item02.builder;
 
 /**
  * effective-java-cn.learn.se.effective.ch02

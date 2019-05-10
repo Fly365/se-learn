@@ -1,4 +1,4 @@
-package cn.learn.se.effective.ch02;
+package errectivejava.chapter02;
 
 import static org.junit.Assert.assertTrue;
 
