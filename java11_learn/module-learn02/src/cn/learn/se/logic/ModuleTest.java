@@ -20,6 +20,7 @@ public class ModuleTest {
     @Test
     public void test01(){
         Person person = new Person(3L,"Jerry",33);
+        System.out.println(person);
     }
 
 
