@@ -5,10 +5,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * 1.验证volatile可见性 - 增加volatile关键字和不带该关键字的区别
  * volatile可以保证可见性，及时通知其他线程，主内存的值已经被修改
- * ProjectName: interview-learn
- * Description: []
- * Author: Fly365
- * CreateDate: 2019年-05月-12日
+ * ProjectName : interview-learn
+ * Description : []
+ * @author : Fly365
+ * CreateDate : 2019年-05月-12日
  */
 public class VolatileDemo01 {
 

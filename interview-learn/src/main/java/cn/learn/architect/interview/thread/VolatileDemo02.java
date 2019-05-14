@@ -1,5 +1,7 @@
 package cn.learn.architect.interview.thread;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * volatile不保证原子性
  * 1.原子性？
@@ -7,10 +9,13 @@ package cn.learn.architect.interview.thread;
  *      中间不可以被加塞或者被分割，需要整体完整，要么同
  *      时成功，要么同时失败。
  * 2，案例测试
- * ProjectName: interview-learn
- * Description: []
- * Author: Fly365
- * CreateDate: 2019年-05月-12日
+ * 3.解决方案
+ *  - 使用synchronized
+ *  - 使用原子类进行操作
+ * ProjectName : interview-learn
+ * Description : []
+ * @author : Fly365
+ * CreateDate : 2019年-05月-12日
  */
 public class VolatileDemo02 {
 
@@ -21,6 +26,7 @@ public class VolatileDemo02 {
             new Thread(() -> {
                 for(int j=1; j<= 1000; j++){
                     myData02.addPlus();
+                    myData02.addAtomicInteger();
                 }
             },String.valueOf(i)).start();
         }
@@ -31,12 +37,13 @@ public class VolatileDemo02 {
             Thread.yield();
         }
 
-        System.out.println("最后计算结果,number=" + myData02.number);
+        System.out.println("type int,最后计算结果,number=" + myData02.number);
+        System.out.println("type AtomicInteger,最后计算结果,atomicInteger=" + myData02.atomicInteger);
     }
 
 }
 
-class MyData02 {
+class MyData02 { //MyData2.java ==> MyData2.class ==> JVM字节码
 
     volatile int number = 0;
 
@@ -46,5 +53,12 @@ class MyData02 {
 
     public void addPlus(){
         number++;
+    }
+
+    //解决处理保证原子性
+    AtomicInteger atomicInteger = new AtomicInteger();
+
+    public void addAtomicInteger(){
+        atomicInteger.getAndIncrement();
     }
 }
