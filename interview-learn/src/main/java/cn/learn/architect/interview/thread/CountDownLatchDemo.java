@@ -15,8 +15,8 @@ public class CountDownLatchDemo {
     private static final int TOTAL_NUM = 6;
 
     public static void main(String[] args) throws InterruptedException {
-        //countDownLatchCase01();
-        CountDownLatch countDownLatch = new CountDownLatch(TOTAL_NUM);
+        countDownLatchCase01();
+        /*CountDownLatch countDownLatch = new CountDownLatch(TOTAL_NUM);
 
         //操作任务
         for (int i = 1; i <=6 ; i++) {
@@ -28,7 +28,7 @@ public class CountDownLatchDemo {
 
         //main等待计数为零
         countDownLatch.await();
-        System.out.println(Thread.currentThread().getName() + "秦国统一天下");
+        System.out.println(Thread.currentThread().getName() + "秦国统一天下");*/
     }
 
     private static void countDownLatchCase01() throws InterruptedException {

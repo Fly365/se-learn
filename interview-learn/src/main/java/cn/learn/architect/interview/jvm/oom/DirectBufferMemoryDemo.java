@@ -1,5 +1,7 @@
 package cn.learn.architect.interview.jvm.oom;
 
+import jdk.internal.misc.VM;
+
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +17,10 @@ public class DirectBufferMemoryDemo {
     public static void main(String[] args) {
        //配置maxDirectMemory大小
         System.out.println("DirectMemory:" +
-                (sun.misc.VM.maxDirectMemory()/(double)1024/1024 + "MB"));
+                // oracle jdk8
+                //(sun.misc.VM.maxDirectMemory()/(double)1024/1024 + "MB"));
+                // openjdk jdk11
+                (VM.maxDirectMemory()/(double)1024/1024 + "MB"));
 
         try {
             TimeUnit.SECONDS.sleep(3);
