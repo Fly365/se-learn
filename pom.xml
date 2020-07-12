@@ -8,5 +8,12 @@
     <artifactId>architect-learn</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>easy-coding</module>
+        <module>effective-java</module>
+        <module>interview-learn</module>
+        <module>juc-learn</module>
+        <module>se-learn</module>
+    </modules>
     
 </project>
