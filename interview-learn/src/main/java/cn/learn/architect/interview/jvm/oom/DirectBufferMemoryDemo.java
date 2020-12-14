@@ -1,6 +1,6 @@
 package cn.learn.architect.interview.jvm.oom;
 
-import jdk.internal.misc.VM;
+//import jdk.internal.misc.VM;
 
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author : Fly365
  * CreateDate : 2019年-05月-25日
  */
-public class DirectBufferMemoryDemo {
+/*public class DirectBufferMemoryDemo {
 
     public static void main(String[] args) {
        //配置maxDirectMemory大小
@@ -31,4 +31,4 @@ public class DirectBufferMemoryDemo {
         //java.lang.OutOfMemoryError: Direct buffer memory
         ByteBuffer buf = ByteBuffer.allocateDirect(6 * 1024 * 1024);
     }
-}
+}*/
